@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    width: 600px;
+    border-collapse: collapse;
+}
+
+td,th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center; /* Alinhamento horizontal */
+    vertical-align: middle;
+}
+
+thead{
+    background-color: gray;
+    color: white;
+}
+
+td.num{
+    text-align: right;
+}
+
+tfoot{
+    background-color: gray;
+    color: white;
+}
+
