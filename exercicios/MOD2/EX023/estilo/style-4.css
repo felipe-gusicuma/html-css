@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 1.5em;
+    font-weight: black;
+}
+
+table{
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+caption{
+    padding: 10px;
+    font-weight: bold;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.destaque{
+    background-color: greenyellow;
+}
+
+col.cnome{
+    background-color: greenyellow;
+}
