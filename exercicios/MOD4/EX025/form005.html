@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulário</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>Formulário Check!</h1>
+<form action="cadastro.php" method="get" autocomplete="on">
+    <fieldset>
+        <legend>Sexo</legend>
+        <p><input type="radio" name="sexo" id="isxmas" value="M" checked>Masculino</p>
+
+        <p><input type="radio" name="sexo" id="isxfem" value="F">Feminino</p>
+
+    </fieldset>
+    
+    <fieldset>
+        <legend>Esportes Favoritos</legend>
+        <p><input type="checkbox" name="futebol" id="iesfutebol" checked><label for="iesfutebol">Futebol</label></p>
+        <p><input type="checkbox" name="basquete" id="iesbasquete"><label for="iesbasquete">Basquete</label></p>
+        <p><input type="checkbox" name="volei" id="iesvolei"><label for="iesvolei">Vôlei</label></p>
+        <p><input type="checkbox" name="natacao" id="iesnatacao"><label for="iesnatacao">Natação</label></p>
+        <p><input type="checkbox" name="tenis" id="iestenis"><label for="iestenis">Tênis</label></p>
+    </fieldset>
+
+<p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+</p>
+
+</form>
+
+
+</body>
+</html>
+
+
+
+<!--
+    checkbox: Quando a questão do formulário é relacionada a uma multiplicidade de opções em que podem ser selecionadas diversas delas, devemos utilizar o "type" "checkbox". Esta permite selecionar diversas opções em caixinhas de check .  
+
+    radio: Utilizamos esse "type" quando o formulário indica uma resposta única de seleção, como por exemplo "Sexo". Podemos colocar diversas opções, mas apenas uma pode ser selecionada. 
+    !!!Importante!!! -> Por fim, para configurar dessa forma de seleção única, devemos colocar o mesmo name para todas as opções. 
+-->
