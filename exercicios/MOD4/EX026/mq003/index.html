@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Media Query</title>
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
+
+<!--
+Para confirgurarmos o "media" já em CSS e sem precisar declarar 3 folhas de estilo diferentes, devemos utilizar a seguinte configuração:
+
+        @media screen and (orientation:portrait){
+        }
+
+Se colocarmos essa configuração dentro de uma folha genérica de estilos, vamos configurar diretamente a "media" dentro de CSS. Veja de forma completa:
+
+        @media screen and (orientation:portrait){
+            body{
+            background-image: url(../imagens/cev-portrait.jpg);
+            background-position: center bottom;
+            }
+        }
+
+        ** Importante ** Não esquecer de abrir e fechar o colchete depois de 
+           "@media screen and (orientation:portrait)" e ao final dela, depois das configurações.
+
+
+*** Para envolver tudo o que é relativo aos estilos de tela (estilo de fontes, cores, background, padding, margin...). que não diretamente o fomrato de visualização, podemos envelopar com "@media all{}".
+
+-->
+

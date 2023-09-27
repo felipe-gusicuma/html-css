@@ -13,11 +13,46 @@
 <body>
     <h1>Exemplo de Formulário</h1>
 
-    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    <form action="cadastro.php" method="post" autocomplete="on">
 
     <p>
         <label for="icor">Cor:</label>
         <input type="color" name="cor" id="icor">
     </p>
+
+    <p>
+        <label for="inivel">Nível de Satisfação</label>
+        <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+
+    </p>
+
+    <p>
+        <label for="ifoto">Foto do perfil</label>
+        <input type="file" name="foto" id="ifoto">
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</form>
+
 </body>
 </html>
+
+<!-- 
+    color: Com o valor "color" em 
+    "type", é contruiída uma caixa de cor selecionável, isto é, onde é possível escolher uma cor através de uma paleta de cores completa;
+
+    range: Em range, uma barra dividida em "níveis" é apresentada. Níveis no sentido de que podemos atribuir valores nela simplesmente empurrando a barra da esquerda para a direita, onde tudo para esquerda é zero (ou o menor valor) e tudo para a direita é 10 (ou o maior valor) e da esquerda para a direita.
+    
+    - Para identificar o valor mínimo e máximo, utilizamos os atributos "min" e "max" junto de input. 
+    
+    - Se quisermos que a barra inicialmente já se apresente em algum valor que não a média(por padrão, toda barra se inicia no centro ou seja no valor médio), acrescentamos o atributo "value" com o valor inicial desejado.
+
+    file: Quando entramos em algum site em que precisamos enviar alguma foto para perfil, ou até mesmo algum documento, utilizamos o input com o atribulo "file". Ele gera o botão que nos permite selecionar uma imagem/arquiivo, localizado em seu computador para que seja feito o upload em seu formulário. 
+
+    - Ao utilizar esse tipo de controle, não podemos utilizar o metódo GET, mas sim POST. 
+    
+    - Formulários que necessitam mais do que os 3 mil bytes (3kb), não é possível enviar por GET, devido sua limitação. No caso de uma imagem, 3kb não é difícil de se estrapolar. 
+-->

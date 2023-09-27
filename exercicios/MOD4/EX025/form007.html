@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+<h1>Exemplo de Formulário</h1>
+<form action="cadastro.php" method="get" autocomplete="on">
+
+<p>
+    <label for="iest">Estado</label>
+    <select name="estadp" id="iest">
+
+        <option value="" selected>--- Seu  Estado ---</option>
+
+        <optgroup label="Região Norte">
+            <option value="AC">Acre</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="PA">Pará</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+        </optgroup>
+
+        <optgroup label="Região Nordeste">
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="MA">Maranhão</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PA">Paraíba</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="SE">Sergipe</option>
+        </optgroup>        
+    
+        <optgroup label="Região Centro">
+            <option value="GO">Goiás</option>
+            <option value="MG">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+        </optgroup>
+
+        <optgroup label="Região Sudeste">
+            <option value="ES">Espírito Santo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+        </optgroup>
+
+            <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SC">Santa Catarina</option>
+
+</select>
+
+<p>
+    <label for="iprof">Profissão:</label>
+    <input type="text" name="Profissão" id="iprof" list="lstprof">
+    <datalist id="lstprof">
+        <option>Administrador</option>
+        <option>Desenvolvedor</option>
+        <option>Designer Gráfico</option>
+        <option>Fotógrafo</option>
+        <option>Video Maker</option>
+    </datalist>
+</p>
+
+<p>
+    <label for="imsg">Mensagem:</label> <br>
+    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+</p>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</p>
+
+</form>
+</body>
+</html>
+
+<!--
+    Em formulários temos algumas funções fora de "input", que podem trabalhar junto com ELEMENTO "label" para identificar e atribur valores dentro de uma lista de opções, por exemplo, pré-definidas ou não.
+    
+    <select>
+    Podemos criar uma lista de opções, em que é possível se escolher uma apenas. Como no exemplo criado acima, usamos os estados brasileiros como opções a serem escolhidas. Como os estados, a princípio, são imutáveis e sendo assim podemos considerar que só existem de fato essas opções.
+
+            <label for="iest">Estado</label>
+    <select name="estadp" id="iest">
+
+        <option value="" selected>--- Seu  Estado ---</option>
+
+        <optgroup label="Região Norte">
+            <option value="AC">Acre</option>
+        </optgroup>
+
+    - <option> Para cada opção dessa lista de seleção utilizamos a tag <option> e cada uma acrescentada, signficará mais um elemento na lista.
+    - Também podemmos utilizar "selected" depois de value, dentro de <option>, o que significará que ao ser carregada, a opção que houver esse valor será automáticamente selecionada.
+    - <optgroup> Podemos separar a lista por categorias, como no exemplo, ao separarmos os estados por região. Utilizamos um ATRIBUTO "label" para dar título à seção.
+    - O "value" não é visível.
+
+
+    <datalist> 
+    Assim como a função <select>, <datalist> nos permite criar uma lista de opções em que apenas uma opção é possível de ser selecionada. Porém, por utilizamos um type="text" em "input", a caixa além de nos dar opções pré-selecionadas também nos permite escrever dentro delas uma nova opção, que não está na lista inicial.
+    
+    - Acrescentamos "id" para relacionar o <datalist> com o seletor;
+
+    <label for="iprof">Profissão:</label>
+    <input type="text" name="Profissão" id="iprof" list="lstprof">
+    <datalist id="lstprof">
+        <option>Administrador</option>
+    </datalist>
+
+    Existem outras funções como é o caso de <textarea>, que não exatamente te da opções selecionáveis, mas atribui outra função à caixa relacionada aos elementos fíxos (Nome, Endereço. Idade, Sexo, etc... O que vem à esquerda da caixa editável pelo usuário).
+
+    <textarea> 
+    para colocar uma caixa de texto de mensagem utilizamos a tag <textarea>. Esta não apresenta um limite para tamanho de texto, sendo ilimitado seu preenchimento. Em suas configurações podemos obsevar alguns atributos como name, id, mas também alguns novos como "cols=30" e "rows=10", o que não significa que, por padrão, ao completar 30 caracteres existirá uma quebra de linha e que será possível a visualização de 10 linhas. (ta,amjp da caixa) 
+        
+    - É possível o usuário aumentar ou diminuir o tamanho da caixa.
+        
+    <label for="imsg">Mensagem:</label> <br>
+    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+    - Para <textarea>, utilizamos o método "post", considerando a limitação de tamanho (bytes).
+
+-->
